@@ -8,7 +8,7 @@ export const insertClient = async (req, res) => {
     try {
       const result = await clientDAO.insertClient(req.body);
       if (result) {
-        res.redirect('/api/products/pedidos')
+        res.redirect('/pedidos')
       } 
     } catch (err) {
       res.json({ status: "Server Unavailable" });
@@ -38,7 +38,7 @@ export const getClients = (req, res) => {
     clientDAO.updateClient(req.params.username,req.body)
     .then(result=>{
       if(result)
-        res.redirect('/api/products/pedidos')
+        res.redirect('/pedidos')
       else 
           res.json({status:"Service unavailable"});
     })
@@ -73,7 +73,7 @@ export const deleteClient = (req, res) => {
   clientDAO.deleteClient(req.params.username)
   .then(result=>{
     if(result)
-        res.redirect('/api/products/pedidos')
+        res.redirect('/pedidos')
     else 
         res.json({status:"Service unavailable"});
   })

@@ -198,23 +198,23 @@
             <h1>groceries</h1>
             <div data-role="navbar" data-grid="c">
 				<ul>
-					<li><a href="/api/products">Inicio</a></li>
-					<li><a href="/api/products/products" class="ui-button-active">Productos</a></li>
-					<li><a href="/api/products/pedidos" >Mix semanal</a></li>
-					<li><a href="/api/products/contacto">Contacto</a></li>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/products" class="ui-button-active">Productos</a></li>
+					<li><a href="/pedidos" >Mix semanal</a></li>
+					<li><a href="/contacto">Contacto</a></li>
 				</ul>
 			</div><!-- /navbar -->
 
             <div role="main" class="ui-content">
                 <img class="logo" src="https://i.ibb.co/9cjVDS2/logo.png" alt="logo" >
-                <p><a href="/api/products/" class="back">Regresar</a></p>
+                <p><a href="/" class="back">Regresar</a></p>
         
            
 
                 <div class="container2">
                     <div class="half">
                     
-                        <form action="/api/products/pedidos" method="POST">
+                        <form action="/pedidos" method="POST">
 
 							<label for="clientNumber">Número de cliente:</label>
                             <input type="text" name="clientNumber" id="clientNumber" value="">
@@ -267,9 +267,9 @@
 								</li>
 								<li>Nombre de usuario: <%=client.user%>
 								</li>
-								<li><a href="/api/products/pedidos/<%=client.user%>" class="ui-btn">Editar</a></li>
-								<form action="/api/products/pedidos/<%= client.user%>"  method="delete"> 
-								<li><button href="/api/products/pedidos" type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Eliminar</button></li>
+								<li><a href="/pedidos/<%=client.user%>" class="ui-btn">Editar</a></li>
+								<form action="/pedidos/<%= client.user%>"  method="delete"> 
+								<li><button href="/pedidos" type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Eliminar</button></li>
 								</form>
 							</ul>
 						</div>

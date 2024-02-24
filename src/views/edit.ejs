@@ -198,10 +198,10 @@
             <h1>groceries</h1>
             <div data-role="navbar" data-grid="c">
 				<ul>
-					<li><a href="/api/products">Inicio</a></li>
-					<li><a href="/api/products/products" class="ui-button-active">Productos</a></li>
-					<li><a href="/api/products/pedidos" >Mix semanal</a></li>
-					<li><a href="/api/products/contacto">Contacto</a></li>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/products" class="ui-button-active">Productos</a></li>
+					<li><a href="/pedidos" >Mix semanal</a></li>
+					<li><a href="/contacto">Contacto</a></li>
 				</ul>
 			</div><!-- /navbar -->
 
@@ -210,7 +210,7 @@
             <div class="container2">
                 <div class="half">
                 
-                    <form action="/api/products/pedidos/<%=client.user%>" method="POST">
+                    <form action="/pedidos/<%=client.user%>" method="POST">
 
                         <label for="clientNumber">Número de cliente:</label>
                         <input type="text" name="clientNumber" id="clientNumber" value="<%=client.clientNumber%>">
