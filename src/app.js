@@ -13,7 +13,7 @@ const app=express();
 //Settings: Se van aconfigurar que va ocupar un motor de pnatilla para responder html
 app.set('view engine','ejs');
 
-app.use(express.static(path.join('/Users/Abimaello/Downloads/API-GROCERIES-main/src/public')))
+//app.use(express.static(path.join('/Users/Abimaello/Downloads/API-GROCERIES-main/src/public')))
 
 // static files
 
