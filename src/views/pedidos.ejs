@@ -245,6 +245,8 @@
                     </div>			
                 </div>
 
+
+				<h1> Listado de clientes</h1>
 				<form>
 					    <input data-type="search" id="searchForCollapsibleSetChildren">
 				</form>
@@ -268,7 +270,7 @@
 								<li>Nombre de usuario: <%=client.user%>
 								</li>
 								<li><a href="/pedidos/<%=client.user%>" class="ui-btn">Editar</a></li>
-								<form action="/pedidos/<%= client.user%>"  method="delete"> 
+								<form action="/pedidos/<%=client.user%>"  method="delete"> 
 								<li><button href="/pedidos" type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Eliminar</button></li>
 								</form>
 							</ul>
