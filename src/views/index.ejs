@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>groceries</title>
+
+	<style>
+		.ofertas{
+		font-size: 2em;
+		color:#F15D54;
+		background-color: #f4eea4;
+		padding:1em;
+		border-radius: .2em;
+		text-align: center;
+	}
+	
+	
+	
+	.logo{
+		width:20%;
+		margin: 0 auto;
+		margin-left: 40%;
+		align-items: center;
+		padding: 0;
+	}
+	.welcome{
+		color: #FF4500;
+		font-size: 4em;
+		text-align: center;
+		
+	}
+	
+	.container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.minic{
+		width: 31%;
+		text-align: center;
+		background-color:#F4E4E6;
+		height: auto;
+		margin: 10px 10px;
+		font-weight: 700;
+		font-size: 1.5em;
+		color:#F15D54;
+		border-radius: 10px;
+	}
+	
+	.minid{
+		width: 31%;
+		text-align: center;
+		background-color:#f4eea4;
+		height: auto;
+		margin: 10px 10px;
+		font-weight: 700;
+		font-size: 1.5em;
+		color:#F15D54;
+		border-radius: 10px;
+	}
+	
+	.picture{
+		width: 80%;
+		align-items: center;
+	}
+	
+	.title{
+		color: #FF4500;
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	.minip{
+		width: 29%;
+		text-align: center;
+		background-color:#f4eea4;
+		height: 100%;
+		margin:10px;
+		font-weight: 700;
+		font-size: 1.2em;
+		color:#ff647e;
+		border-radius: 10px;
+		padding: 1em;
+		
+	}
+	
+	.product{
+		width: 65%;
+		align-items: center;
+		padding-top: 1em;
+	}
+	
+	.container2{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	
+	.banner{
+		width: 85%;
+		padding:20px 20px;
+	}
+	
+	.half{
+		width: 45%;
+	}
+	
+	.halfbanner{
+		width: 40%;
+	  
+	}
+	
+	form{
+		background-color: #f4eea4;
+		width: 100%;
+		padding: 2em;
+	}
+	
+	.container3{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	.back{
+		margin-left: 1.5em;
+		text-decoration: none;
+		color: #F15D54;
+	}
+	
+	.button{
+		width: 80%;
+	}
+	
+	button{
+		width: 80%;
+	}
+	
+	.barcode{
+		font-size: .5em;
+	}
+	
+	
+	
+	@media screen and (max-width:500px) {
+		.ofertas{
+			font-size: 1em;
+			color:#F15D54;
+			background-color: #f4eea4;
+			padding:1em;
+			border-radius: .2em;
+			text-align: center;
+		}
+	
+		.container, .container3, .container2{
+			flex-direction: column;
+			align-items: center;
+		} 
+		.minic, .minid{
+			width: 90%;
+			font-size: 1.5em;
+			
+		}
+	
+		.logo{
+			width:30%;
+		}
+	
+		.minip{
+			font-size: 1em;
+			padding: .5em;
+			height: 100%;
+			width: 42%;
+			margin: 5px;
+			align-content: center;
+		
+		}
+	
+		.half{
+			width: 60%;
+			padding: .5em;
+		}
+	
+	}
+	
+	</style>
+</head>
+
+<body>
+    <div data-role="page" id="index">
+        <div data-role="header">
+            <h1>groceries</h1>
+            <div data-role="navbar" data-grid="c">
+				<ul>
+					<li><a href="/api/products">Inicio</a></li>
+					<li><a href="/api/products/products" class="ui-button-active">Productos</a></li>
+					<li><a href="/api/products/pedidos" >Mix semanal</a></li>
+					<li><a href="/api/products/contacto">Contacto</a></li>
+				</ul>
+			</div><!-- /navbar -->
+
+		</div><!-- /header -->
+		<div role="main" class="ui-content">
+			<img class="logo" src="https://i.ibb.co/9cjVDS2/logo.png" alt="logo">
+			<p class="ofertas"><a href="#pedidos">🔥🔥🔥 Inscríbete a nuestra entrega Mix semanal 🔥 🔥 🔥</a></p>
+			<div class="container">
+				<div class="minic">
+					<p>Productos siempre frescos </p>
+					<img class="picture" src="https://i.ibb.co/2szCLCK/zanahoria.png" alt="zanahoria" >
+				</div>
+				<div class="minid">
+					<p>Pedidos en 30 min </p>
+					<img class="picture" src="https://i.ibb.co/pKjZYVM/9.png" >
+				</div>
+				<div class="minic">
+					<p>Clientes satisfechos </p>
+					<img class="picture" src="https://i.ibb.co/dDMVBbc/10.png" alt="10" >
+				</div>
+			</div>
+    
+        <div data-role="footer">
+            <h5>Developed by abimaello </h5>
+        </div>
+    </div>
+	
+		
+</body>
+
+</html>

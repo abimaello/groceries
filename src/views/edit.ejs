@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>groceries</title>
+
+	<style>
+		.ofertas{
+		font-size: 2em;
+		color:#F15D54;
+		background-color: #f4eea4;
+		padding:1em;
+		border-radius: .2em;
+		text-align: center;
+	}
+	
+	
+	
+	.logo{
+		width:20%;
+		margin: 0 auto;
+		margin-left: 40%;
+		align-items: center;
+		padding: 0;
+	}
+	.welcome{
+		color: #FF4500;
+		font-size: 4em;
+		text-align: center;
+		
+	}
+	
+	.container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	
+	.minic{
+		width: 31%;
+		text-align: center;
+		background-color:#F4E4E6;
+		height: auto;
+		margin: 10px 10px;
+		font-weight: 700;
+		font-size: 1.5em;
+		color:#F15D54;
+		border-radius: 10px;
+	}
+	
+	.minid{
+		width: 31%;
+		text-align: center;
+		background-color:#f4eea4;
+		height: auto;
+		margin: 10px 10px;
+		font-weight: 700;
+		font-size: 1.5em;
+		color:#F15D54;
+		border-radius: 10px;
+	}
+	
+	.picture{
+		width: 80%;
+		align-items: center;
+	}
+	
+	.title{
+		color: #FF4500;
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	.minip{
+		width: 29%;
+		text-align: center;
+		background-color:#f4eea4;
+		height: 100%;
+		margin:10px;
+		font-weight: 700;
+		font-size: 1.2em;
+		color:#ff647e;
+		border-radius: 10px;
+		padding: 1em;
+		
+	}
+	
+	.product{
+		width: 65%;
+		align-items: center;
+		padding-top: 1em;
+	}
+	
+	.container2{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+	
+	.banner{
+		width: 85%;
+		padding:20px 20px;
+	}
+	
+	.half{
+		width: 45%;
+	}
+	
+	.halfbanner{
+		width: 40%;
+	  
+	}
+	
+	form{
+		background-color: #f4eea4;
+		width: 100%;
+		padding: 2em;
+	}
+	
+	.container3{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	
+	.back{
+		margin-left: 1.5em;
+		text-decoration: none;
+		color: #F15D54;
+	}
+	
+	.button{
+		width: 80%;
+	}
+	
+	button{
+		width: 80%;
+	}
+	
+	.barcode{
+		font-size: .5em;
+	}
+	
+	
+	
+	@media screen and (max-width:500px) {
+		.ofertas{
+			font-size: 1em;
+			color:#F15D54;
+			background-color: #f4eea4;
+			padding:1em;
+			border-radius: .2em;
+			text-align: center;
+		}
+	
+		.container, .container3, .container2{
+			flex-direction: column;
+			align-items: center;
+		} 
+		.minic, .minid{
+			width: 90%;
+			font-size: 1.5em;
+			
+		}
+	
+		.logo{
+			width:30%;
+		}
+	
+		.minip{
+			font-size: 1em;
+			padding: .5em;
+			height: 100%;
+			width: 42%;
+			margin: 5px;
+			align-content: center;
+		
+		}
+	
+		.half{
+			width: 60%;
+			padding: .5em;
+		}
+	
+	}
+	
+	</style>
+</head>
+
+<body>
+    <div data-role="page" id="index">
+        <div data-role="header">
+            <h1>groceries</h1>
+            <div data-role="navbar" data-grid="c">
+				<ul>
+					<li><a href="/api/products">Inicio</a></li>
+					<li><a href="/api/products/products" class="ui-button-active">Productos</a></li>
+					<li><a href="/api/products/pedidos" >Mix semanal</a></li>
+					<li><a href="/api/products/contacto">Contacto</a></li>
+				</ul>
+			</div><!-- /navbar -->
+
+
+        
+            <div class="container2">
+                <div class="half">
+                
+                    <form action="/api/products/pedidos/<%=client.user%>" method="POST">
+
+                        <label for="clientNumber">Número de cliente:</label>
+                        <input type="text" name="clientNumber" id="clientNumber" value="<%=client.clientNumber%>">
+        
+                        <label for="name">Nombre completo:</label>
+                        <input type="text" name="name" id="name" value="<%=client.name%>">
+
+                        <label for="address">Dirección:</label>
+                        <input type="text" name="address" id="address" value="<%=client.address%>">
+
+                        <label for="tel">Teléfono:</label>
+                        <input type="tel" name="tel" id="tel" value="<%=client.tel%>">
+
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" name="correo" id="correo" value="<%=client.email%>">
+
+                        <label for="user">Usuario:</label>
+                        <input type="text" name="user" id="user" value="<%=client.user%>">
+
+
+                        <button type="submit" id="submit-6" class="ui-shadow ui-btn ui-corner-all ui-mini">Guardar</button>
+                      
+                    
+                </form>
+                </div>
+                <div class="halbanner">
+                    <img class="banner" src="https://i.ibb.co/zFszYnn/banner.png" alt="banner" >
+                </div>			
+            </div>
+
+
+
+
+
+
+        </div>
+    </div></body></html>
