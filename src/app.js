@@ -21,7 +21,7 @@ app.use(express.static(path.join('/Users/Abimaello/Downloads/API-GROCERIES-main/
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(morgan('dev'));
-app.use('/api/products',productsRouter); //api/products es un prefijo
+app.use('/',productsRouter); //api/products es un prefijo
 
 
 export default app; //exportar para quien lo pueda usar en este caso index.js
