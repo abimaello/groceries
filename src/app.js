@@ -4,8 +4,7 @@ import path from "path";
 import ejs from "ejs";
 //import { path } from "express";
 //con esto configuramos las variables de etnrono
-import {config} from 'dotenv';
-config();
+
 import productsRouter from './routes/products.routes.js'; 
 //variables de entorno para el puerto 
 const app=express();
